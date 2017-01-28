@@ -47,7 +47,6 @@ gulp.task("compile-styles", function() {
                .pipe(postcss([precss,cssnano,autoprefixer]))
                .pipe(ext_replace(".css"))
                .pipe(sourcemaps.write())
-               .pipe(concat('app.css'))
                .pipe(gulp.dest(config.cssOutputPath));
 });
 
